@@ -34,14 +34,16 @@ impl Generator {
 
 		if let Ok(mut file) = File::create(filepath) {
 			if let Err(e) = file.write_all(format!(
-				"[Desktop Entry]
-				Version=1.0
-				Type=Application
-				Name={}
-				Exec={}
-				Comment={}",
+"[Desktop Entry]
+Version=1.0
+Type=Application
+Name={}
+Exec={}
+Icon={}
+Comment={}",
 				self.name,
 				self.executable_path,
+				self.icon_path,
 				self.comment
 			).as_bytes()) {
 				return Err(format!("Failed to write to {}: {e}", filepath.display()));
