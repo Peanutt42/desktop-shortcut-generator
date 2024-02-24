@@ -6,4 +6,4 @@ edition = "2021"
 [dependencies]
 eframe = "0.24.1"
 rfd = "0.12.1"
-home = "0.5.9"
+dirs = "5.0"
